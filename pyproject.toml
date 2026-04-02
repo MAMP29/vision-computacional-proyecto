@@ -1,0 +1,28 @@
+[project]
+name = "python-project"
+version = "0.1.0"
+description = "Entorno de Deep Learning con PyTorch y CUDA en NixOS"
+authors = []
+requires-python = ">=3.12, <3.13"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "polars",
+    "matplotlib",
+    "scikit-learn",
+    "jupyterlab",
+    "notebook",
+    "ipykernel",
+    "tqdm",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
