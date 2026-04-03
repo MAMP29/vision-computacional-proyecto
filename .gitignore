@@ -1,4 +1,5 @@
 .idea
 .direnv
-data/african-wildlife.zip
+data/africa-wildlife/african-wildlife.zip
+data/africa-wildlife/*
 *.pyc
