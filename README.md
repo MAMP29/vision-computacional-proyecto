@@ -133,11 +133,28 @@ Debe aparecer el nombre de la GPU
 
 ```
 python-project/
-│
 ├── entrega_1
-│   ├── cnn
-│   └── mlp
-├─ pyproject.toml
-├─ README.md
-└─ .venv/
+│   ├── cnn
+│   │   ├── best_model.pth
+│   │   ├── cnn_classification.ipynb
+│   │   ├── __init__.py
+│   │   └── model.py
+│   ├── __init__.py
+│   ├── mlp
+│   │   └── mlp_classification.ipynb
+│   └── utils
+│       ├── animal_dataset.py
+│       ├── early_stopping.py
+│       ├── __init__.py
+│       ├── testing.py
+│       └── training.py
+├── data
+├── flake.lock
+├── flake.nix
+├── pyproject.toml
+├── README.md
+└── uv.lock
 ```
+# 7. Descargar datos
+
+Datos de la primera entrega proporcionados por ultralytics, para descargarlos haga clic [aquí](https://docs.ultralytics.com/datasets/detect/african-wildlife/), poner el zip sobre la carpeta data y extraer
