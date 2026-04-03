@@ -134,7 +134,7 @@ Debe aparecer el nombre de la GPU
 ```
 python-project/
 │
-├── entrega-1
+├── entrega_1
 │   ├── cnn
 │   └── mlp
 ├─ pyproject.toml
