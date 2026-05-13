@@ -1,5 +1,8 @@
 import torch
 from tqdm.auto import tqdm
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 class Trainer:
     def __init__(self, model, device, criterion, optimizer, early_stopping=None):
@@ -76,3 +79,53 @@ class Trainer:
                     break
 
         return history
+
+
+
+def plot_history(history):
+    sns.set_style("whitegrid")
+
+    epochs = range(1, len(history["train_loss"]) + 1)
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+
+    # Loss
+    axes[0].plot(
+        epochs,
+        history["train_loss"],
+        label="Train Loss",
+        marker="o"
+    )
+    axes[0].plot(
+        epochs,
+        history["val_loss"],
+        label="Val Loss",
+        marker="o"
+    )
+
+    axes[0].set_title("Loss")
+    axes[0].set_xlabel("Epoch")
+    axes[0].set_ylabel("Loss")
+    axes[0].legend()
+
+    # Accuracy
+    axes[1].plot(
+        epochs,
+        history["train_acc"],
+        label="Train Acc",
+        marker="o"
+    )
+    axes[1].plot(
+        epochs,
+        history["val_acc"],
+        label="Val Acc",
+        marker="o"
+    )
+
+    axes[1].set_title("Accuracy")
+    axes[1].set_xlabel("Epoch")
+    axes[1].set_ylabel("Accuracy")
+    axes[1].legend()
+
+    plt.tight_layout()
+    plt.show()
