@@ -4,3 +4,6 @@ data/africa-wildlife/african-wildlife.zip
 data/africa-wildlife/*
 *.pyc
 *.pth
+.venv
+.ipynb_checkpoints/
+python_project.egg-info/
