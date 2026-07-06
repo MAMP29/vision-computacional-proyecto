@@ -135,20 +135,28 @@ Debe aparecer el nombre de la GPU
 python-project/
 ├── entrega_1
 │   ├── cnn
-│   │   ├── best_model.pth
 │   │   ├── cnn_classification.ipynb
 │   │   ├── __init__.py
-│   │   └── model.py
+│   │   └──  model.py
 │   ├── __init__.py
 │   ├── mlp
-│   │   └── mlp_classification.ipynb
+│   │   ├── mlp_classification.ipynb
+│   │   └── model.py
 │   └── utils
 │       ├── animal_dataset.py
 │       ├── early_stopping.py
 │       ├── __init__.py
 │       ├── testing.py
 │       └── training.py
-├── data
+├── entrega_2
+│   ├── two_steps
+│   │   ├── __init__.py
+│   │   └── two_steps_detection.ipynb
+│   └── utils
+│       ├── chess_dataset.py
+│       ├── __init__.py
+│       ├── testing.py
+│       └── training.py
 ├── flake.lock
 ├── flake.nix
 ├── pyproject.toml
@@ -157,4 +165,14 @@ python-project/
 ```
 # 7. Descargar datos
 
+## Primera entrega
 Datos de la primera entrega proporcionados por ultralytics, para descargarlos haga clic [aquí](https://docs.ultralytics.com/datasets/detect/african-wildlife/), poner el zip sobre la carpeta data y extraer
+
+## Segunda entrega
+Datos de la segunda entrega proporcionados por RobotFlow, para descargarlos haga clic [aquí](https://universe.roboflow.com/joseph-nelson/chess-pieces-new/dataset/1)
+Descargar la version que dice: 416x416auto-orient en formato COCO JSON con el siguiente preprocesado:
+- Auto-Orient: Applied
+- Resize: Stretch to 416x416
+
+Extraer, copiar los directorios de test, train y valid y pegarlos en la carpeta de data en una subcarpeta llamada
+chess-pieces-coco

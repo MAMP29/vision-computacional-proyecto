@@ -1,7 +1,7 @@
 [project]
 name = "python-project"
 version = "0.1.0"
-description = "Entorno de Deep Learning con PyTorch y CUDA en NixOS"
+description = "Entorno de Trabajo con Vision Computacional con PyTorch y CUDA"
 authors = []
 requires-python = ">=3.12, <3.13"
 
@@ -17,6 +17,8 @@ dependencies = [
     "ipykernel",
     "tqdm",
     "seaborn",
+    "pycocotools",
+    "torchmetrics",
 ]
 
 [[tool.uv.index]]

@@ -2,6 +2,7 @@
 .direnv
 data/africa-wildlife/african-wildlife.zip
 data/africa-wildlife/*
+data/chess-pieces-coco/*
 *.pyc
 *.pth
 .venv
