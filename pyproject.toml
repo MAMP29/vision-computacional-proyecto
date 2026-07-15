@@ -15,10 +15,16 @@ dependencies = [
     "jupyterlab",
     "notebook",
     "ipykernel",
+    "ipywidgets",
     "tqdm",
     "seaborn",
     "pycocotools",
     "torchmetrics",
+    "diffusers",
+    "transformers",
+    "accelerate",
+    "peft",
+    "datasets",
 ]
 
 [[tool.uv.index]]

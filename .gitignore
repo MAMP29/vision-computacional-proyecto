@@ -3,8 +3,15 @@
 data/africa-wildlife/african-wildlife.zip
 data/africa-wildlife/*
 data/chess-pieces-coco/*
+data/emoart-5k/*
+data/emoart-cured/*
+data/emoart-with-augmentation/*
 *.pyc
 *.pth
 .venv
 .ipynb_checkpoints/
 python_project.egg-info/
+entrega_3/generator/dataset_aumentado_cnn/*
+entrega_3/generator/lora_art_model/*
+entrega_3/generator/lora_art_model_detenido/*
+entrega_3/classifier/emoart-gan-train/*

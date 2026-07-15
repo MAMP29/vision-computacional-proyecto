@@ -176,3 +176,7 @@ Descargar la version que dice: 416x416auto-orient en formato COCO JSON con el si
 
 Extraer, copiar los directorios de test, train y valid y pegarlos en la carpeta de data en una subcarpeta llamada
 chess-pieces-coco
+
+## Tercera entrega
+Datos de la segunda entrega proporcionados por RobotFlow, para descargarlos haga clic [aquí](https://drive.google.com/file/d/1WCBKTyqe2LMAvYBN5Hkl4SG_TZy3Dq1a/view?usp=sharing)
+Extraer y copiar en carpeta data

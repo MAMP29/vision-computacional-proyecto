@@ -6,11 +6,12 @@ from sklearn.metrics import classification_report, confusion_matrix, precision_r
 import matplotlib.pyplot as plt
 
 class Testing:
-    def __init__(self, model, model_path, device, criterion):
+    def __init__(self, model, model_path, device, criterion, classes):
         self.model = model
         self.model_path = model_path
         self.device = device
         self.criterion = criterion
+        self.classes = classes
 
     def load_model(self):
         state_dict = torch.load(self.model_path, weights_only=True)
@@ -22,9 +23,9 @@ class Testing:
         test_loss = 0
         correct = 0
         test_loss_list = []
-        class_correct = list(0. for _ in range(4))
-        class_total = list(0. for _ in range(4))
-        classes = ['buffalo', 'elephant', 'rhino', 'zebra']
+        class_correct = list(0. for _ in range(len(self.classes)))
+        class_total = list(0. for _ in range(len(self.classes)))
+        classes = self.classes
 
         # Estructuras para recolectar datos destinados a sklearn
         all_preds = []
@@ -53,7 +54,7 @@ class Testing:
                     class_total[label] += 1
 
         print(f'Test Accuracy Global: {100. * correct / len(test_loader.dataset):.2f}%')
-        for i in range(4):
+        for i in range(len(self.classes)):
             if class_total[i] > 0:
                 acc = 100 * class_correct[i] / class_total[i]
                 print(f'Accuracy de {classes[i]}: {acc:.2f}%')
@@ -111,7 +112,6 @@ class Testing:
         print(" INFORME DE MÉTRICAS (Classification Report)")
         print("=" * 60)
         print(classification_report(all_labels, all_preds, target_names=classes, zero_division=0))
-
 
 
 def check_errors(model, device, test_loader, classes, num_images=10):
