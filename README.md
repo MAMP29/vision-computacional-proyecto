@@ -178,5 +178,5 @@ Extraer, copiar los directorios de test, train y valid y pegarlos en la carpeta 
 chess-pieces-coco
 
 ## Tercera entrega
-Datos de la segunda entrega proporcionados por RobotFlow, para descargarlos haga clic [aquí](https://drive.google.com/file/d/1WCBKTyqe2LMAvYBN5Hkl4SG_TZy3Dq1a/view?usp=sharing)
+Datos de la tercera entrega proporcionados por EmoArt, para descargar la version especial que usamos en esta entrega haga clic [aquí](https://drive.google.com/file/d/1WCBKTyqe2LMAvYBN5Hkl4SG_TZy3Dq1a/view?usp=sharing)
 Extraer y copiar en carpeta data
